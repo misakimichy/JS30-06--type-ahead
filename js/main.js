@@ -7,12 +7,14 @@ const fetchData = () => {
     return locations;
 };
 
-const findMatches = (wordToMatch, locations) => {
-    return locations.filter(place => {
+function findMatches(wordToMatch) {
+    const locations = fetchData();
+    const matched = locations.filter(location => {
         // Return city and state names that match what was searched
         const regex = new RegExp(wordToMatch, 'gi');
-        return place.city.match(regex) || place.state.match(regex)
+        return location.city.match(regex) || location.state.match(regex)
     });
+    return matched;
 };
 
 const addCommas = num => {
@@ -21,8 +23,7 @@ const addCommas = num => {
   }
   
 function displayMatches() {
-    const locations = fetchData();
-    const matchArray = findMatches(this.value, locations);
+    const matchArray = findMatches(this.value);
     const html = matchArray.map(place => {
         const regex = new RegExp(this.value, 'gi');
         const cityName = place.city.replace(regex, `<span class="h1">${this.value}</span>`);
