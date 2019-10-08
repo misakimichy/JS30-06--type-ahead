@@ -1,7 +1,7 @@
 const fetchData = () => {
-    const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+    const url = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
     const locations = [];
-    fetch(endpoint)
+    fetch(url)
         .then(res => res.json())
         .then(data => locations.push(...data));
     return locations;
@@ -9,9 +9,9 @@ const fetchData = () => {
 
 const findMatches = (wordToMatch, locations) => {
     return locations.filter(place => {
-        // Create regex searches globally and case insensitive
+        // Return city and state names that match what was searched
         const regex = new RegExp(wordToMatch, 'gi');
-        return place.city.match(regex) || place.state.match(regex);
+        return place.city.match(regex) || place.state.match(regex)
     });
 };
 
