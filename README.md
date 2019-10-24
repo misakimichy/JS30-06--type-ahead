@@ -1,16 +1,22 @@
-# 06. Type Ahead
+# 06. Ajax Type Ahead
 
-#### _Type Ahead by JavaScript30 10/06/19_
+#### _Ajax Type Ahead by JavaScript30 10/06/19_
 
 ## Description
-This is Type Ahead application, 6th application out of 30 by 30 day Vanilla JavaScript Coding Challenge by Wes Bos.<br>
+This is Ajax Type Ahead application, 6th application out of 30 by 30 day Vanilla JavaScript Coding Challenge by Wes Bos.<br>
 Please check the challenge from [JavaScript30](http://wesbos.com/javascript30/).
 
 ![Screenshot of the app](img/screenshot.png)
 
 
-## About this Application:
-- 
+## About this Application
+- When a user type, it'll show you the list of cities, states and the population, which matches with what the user typed.
+
+- The city, state and population data is from the external source, `cities.json`.
+
+- Use `fetch` for the API call.
+
+- Use `regex` to find the matched result.
 
 
 ## Setup/Installation Requirements
