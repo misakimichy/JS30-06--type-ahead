@@ -64,3 +64,7 @@ input {
 span.population {
     font-size: 15px;
 }
+
+.highlight {
+    background-color: #ffc800;
+}
