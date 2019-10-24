@@ -34,7 +34,6 @@ input {
     border-radius: 3px;
     position: relative;
     top: 10px;
-    
 }
 
 .suggestions {
@@ -47,8 +46,9 @@ input {
     border-bottom: 1px solid darkgray;
     padding: 15px;
     display: flex;
+    justify-content: space-between;
     text-transform: capitalize;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .suggestions li:nth-child(even) {
@@ -59,4 +59,8 @@ input {
 .suggestions li:nth-child(odd) {
     transform: perspective(100px) rotateX(-2deg) translateY(2px);
     background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+span.population {
+    font-size: 15px;
 }
